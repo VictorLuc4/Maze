@@ -12,10 +12,10 @@ char	**generate_map(int y, int x, t_my_map m)
   while (++m.a < y)
     {
       if ((m.map[m.a] = malloc(x + 1)) == NULL)
-	return (NULL);
+	      return (NULL);
       while (++m.b < x)
-	(m.b % 2) == 0 && (m.a % 2) == 0 ?
-	  m.map[m.a][m.b] = '*' : (m.map[m.a][m.b] = 'X');
+	      (m.b % 2) == 0 && (m.a % 2) == 0 ?
+	    m.map[m.a][m.b] = '*' : (m.map[m.a][m.b] = 'X');
       m.map[m.a][m.b] = 0;
       m.b = -1;
     }
@@ -35,11 +35,11 @@ char	**generate_perfect(t_my_map m, int y, int x)
     {
       j = save;
       while (j >=  0)
-	{
-	  if (j != 0 || i != 0)
-	    m.map = map_edit(m, i, j);
-	  j -= 2;
-	}
+      {
+        if (j != 0 || i != 0)
+          m.map = map_edit(m, i, j);
+        j -= 2;
+      }
       i -= 2;
     }
   m.map = map_modif(m, y, x);
@@ -58,8 +58,8 @@ char	**generate_imperfect(t_my_map m, int y, int x)
   while (++i < y)
     {
       while (++j < x)
-	if (m.map[i][j] == 'X')
-	  floor++;
+	      if (m.map[i][j] == 'X')
+	        floor++;
       j = -1;
     }
   map_imperf(m, y, x, floor);

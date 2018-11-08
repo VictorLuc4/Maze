@@ -19,7 +19,7 @@ typedef struct	s_my_map
   char		**map;
   int		a;
   int		b;
-}		t_my_map;
+}		            t_my_map;
 
 typedef struct	s_my_way
 {
@@ -27,7 +27,7 @@ typedef struct	s_my_way
   int		down;
   int		left;
   int		right;
-}		t_my_way;
+}		            t_my_way;
 
 char		**generate_map(int, int, t_my_map);
 char		**choose_mapformat(char**, t_my_map, int, int);
@@ -41,6 +41,6 @@ char		**generate_perfect(t_my_map, int, int);
 char		**map_modif(t_my_map, int, int);
 char		**map_edit(t_my_map, int, int);
 
-int		my_strlen(char*);
+int		  my_strlen(char*);
 
 #endif
