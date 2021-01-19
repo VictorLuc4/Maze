@@ -2,16 +2,16 @@
 ## Made by Victor Lucas
 ##
 
-RM		=	rm -f
+RM			=	rm -f
 
-CC		=	gcc -o
+CC			=	gcc -o
 
-SRC		=	src/main.c				\
-			src/generation_map.c	\
-			src/writing_onfile.c	\
-			src/map_edit.c			
+SRC			=	src/main.c				\
+				src/generation_map.c	\
+				src/writing_onfile.c	\
+				src/map_edit.c			
 
-OBJ		=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
 
 CFLAGS		+=	-Wall -Wextra -Werror
 CFLAGS		+=	-ansi -pedantic -Iinclude

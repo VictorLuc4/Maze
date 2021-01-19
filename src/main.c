@@ -4,7 +4,7 @@
 
 #include "map.h"
 
-char	**choose_mapformat(char **av, t_my_map m, int y, int x)
+char	**choose_mapformat(char **av, t_map m, int y, int x)
 {
   if (av[3] != NULL)
     {
@@ -33,7 +33,7 @@ void check_args(int ac, char **av, int *x, int *y)
 
 int		main(int ac, char **av)
 {
-  t_my_map	m;
+  t_map	m;
   int		x;
   int		y;
           

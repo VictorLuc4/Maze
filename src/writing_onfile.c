@@ -4,7 +4,7 @@
 
 #include "map.h"
 
-char		**writing_onfile(t_my_map m, int y, int x)
+char		**writing_onfile(t_map m, int y, int x)
 {
   mode_t	mode;
   int		fd;

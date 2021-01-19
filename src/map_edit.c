@@ -13,7 +13,7 @@ int	my_strlen(char *str)
   return (i);
 }
 
-char	**map_modif(t_my_map m, int y, int x)
+char	**map_modif(t_map m, int y, int x)
 {
   if ((y % 2) == 0 || (x % 2) == 0)
     {
@@ -28,7 +28,7 @@ char	**map_modif(t_my_map m, int y, int x)
   return (m.map);
 }
 
-int	choose_ran2(t_my_way way)
+int	choose_ran2(t_way way)
 {
   int	ran;
 
@@ -42,9 +42,9 @@ int	choose_ran2(t_my_way way)
   return (ran);
 }
 
-char	**map_edit(t_my_map m, int i, int j)
+char	**map_edit(t_map m, int i, int j)
 {
-  t_my_way	way;
+  t_way	way;
   int		ran;
 
   way.up = way.down = ran = 1;
@@ -76,7 +76,7 @@ char	**map_edit(t_my_map m, int i, int j)
   return (m.map);
 }
 
-char	**map_imperf(t_my_map m, int y, int x, int floor)
+char	**map_imperf(t_map m, int y, int x, int floor)
 {
   int	i;
   int	j;

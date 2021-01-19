@@ -4,7 +4,7 @@
 
 #include "map.h"
 
-char	**generate_map(int y, int x, t_my_map m)
+char	**generate_map(int y, int x, t_map m)
 {
   m.a = m.b = -1;
   if ((m.map = malloc(sizeof(char*) * (y + 1))) == NULL)
@@ -23,7 +23,7 @@ char	**generate_map(int y, int x, t_my_map m)
   return (m.map);
 }
 
-char	**generate_perfect(t_my_map m, int y, int x)
+char	**generate_perfect(t_map m, int y, int x)
 {
   int	i;
   int	j;
@@ -46,7 +46,7 @@ char	**generate_perfect(t_my_map m, int y, int x)
   return (m.map);
 }
 
-char	**generate_imperfect(t_my_map m, int y, int x)
+char	**generate_imperfect(t_map m, int y, int x)
 {
   int	floor;
   int	i;
