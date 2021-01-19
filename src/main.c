@@ -36,15 +36,24 @@ int		main(int ac, char **av)
   t_map	m;
   int		x;
   int		y;
-          
+
+  /* Checking error in arguments */
   check_args(ac, av, &x, &y);
+
   srand(time(NULL));
+  /* Generate the base map */
   if ((m.map = generate_map(y, x, m)) == NULL)
     return (84);
+
+  /* Apply modification upon perfect / imperfect */
   if ((m.map = choose_mapformat(av, m, y, x)) == NULL)
     return (84);
+  
+  /* Write the map to the file */
   if ((writing_onfile(m, y, x)) == NULL)
     return (84);
+  
+  /* Free what is needed */
   free(m.map);
   return (0);
 }

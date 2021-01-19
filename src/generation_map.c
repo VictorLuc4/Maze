@@ -4,6 +4,7 @@
 
 #include "map.h"
 
+/* Create a map sized X (lenght) and Y (height) */
 char	**generate_map(int y, int x, t_map m)
 {
   m.a = m.b = -1;
